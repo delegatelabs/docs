@@ -1,0 +1,136 @@
+---
+title: Integration Permissions
+description: Control exactly what your delegate can access.
+---
+
+# Integration Permissions
+
+Permissions control what your delegate can do with each connected integration. You decide the level of access, and you can change it at any time.
+
+## Permission Modes
+
+Delegate offers two permission modes:
+
+### Simple Mode
+
+A straightforward toggle for each integration:
+
+- **Read** - Your delegate can view information
+- **Write** - Your delegate can also create and modify content
+- **Off** - No access to this integration
+
+Simple mode offers easy on/off control without complexity.
+
+### Advanced Mode (Default)
+
+Fine-grained control over specific resources and capabilities:
+
+- **Request specific resources** - Access to particular documents, channels, or repositories
+- **Capability-level permissions** - Control individual actions like "send email" vs. "search inbox"
+- **Granular scopes** - Different access levels for different resources
+
+Advanced mode gives you precise control when you need it.
+
+## Switching Modes
+
+You can switch between Simple and Advanced mode in your integration settings:
+
+1. Go to **Profile → Integrations**
+2. Click on any integration
+3. Toggle between **Simple** and **Advanced** mode
+
+Switching to Advanced mode preserves your existing permissions as a starting point.
+
+## How Permissions Work
+
+### Read vs. Write
+
+| Read Access | Write Access |
+|-------------|--------------|
+| View emails | Send emails |
+| See calendar events | Create events |
+| Read documents | Edit documents |
+| Browse Slack channels | Post messages |
+| View issues | Create/update issues |
+
+Write access always includes read access.
+
+### Resource-Level Permissions (Advanced Mode)
+
+In Advanced mode, you can grant access to specific resources:
+
+- **Specific Google Docs** - Not all docs, just certain ones
+- **Specific Slack channels** - Post to #general but not #private
+- **Specific repositories** - Access repo A but not repo B
+
+Your delegate will request access to new resources as needed. You approve or deny each request.
+
+### Capability-Level Permissions (Advanced Mode)
+
+Control specific actions independently:
+
+**Gmail example:**
+- ✅ Search inbox
+- ✅ Read emails
+- ❌ Send emails
+- ❌ Manage labels
+
+**Calendar example:**
+- ✅ View events
+- ❌ Create events
+- ❌ Delete events
+
+## Approval Workflow
+
+In Advanced mode, your delegate may need to request new permissions:
+
+1. **Delegate encounters need** - Trying to do something it doesn't have access to
+2. **Request sent** - You see an approval request explaining what's needed
+3. **You decide** - Approve, deny, or ask for more information
+4. **Access granted/denied** - Your decision takes effect immediately
+
+This keeps you informed and in control as your delegate's needs evolve.
+
+## Revoking Access
+
+You can revoke access at any level:
+
+### Remove a Resource
+In Advanced mode, remove access to a specific document, channel, or repository.
+
+### Downgrade Permissions
+Change from write to read-only for an integration.
+
+### Disconnect Entirely
+Remove all access to an integration.
+
+Changes take effect immediately.
+
+## Best Practices
+
+### Start Conservative
+
+Begin with read-only access and expand as needed. It's easier to grant more access than to undo actions.
+
+### Use Advanced Mode for Sensitive Tools
+
+For tools with sensitive data (email, financial systems), consider Advanced mode for fine-grained control.
+
+### Review Periodically
+
+Check your integration permissions occasionally to ensure they still match your needs.
+
+### Trust But Verify
+
+Your delegate will explain what it's trying to do. Review its actions in the Activity Feed to build confidence.
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Owner vs. Member" icon="users" href="/integrations/owner-vs-member">
+    How permissions work with teams
+  </Card>
+  <Card title="Capabilities" icon="wand-magic-sparkles" href="/delegates/capabilities">
+    What your delegate can do
+  </Card>
+</CardGroup>

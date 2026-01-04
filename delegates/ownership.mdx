@@ -1,0 +1,110 @@
+---
+title: Ownership & Permissions
+description: Who owns a delegate and how permissions work.
+---
+
+# Delegate Ownership & Permissions
+
+Understanding ownership is key to using Delegate effectively, especially in team settings.
+
+## One Delegate Per Person
+
+Every person in an initiative has their own delegate. If you create an initiative, you get a delegate. If you're invited to join an initiative, you get your own delegate there too.
+
+Your delegate is personal to you:
+- It learns your preferences, not someone else's
+- It acts on your behalf with your permissions
+- It remembers your instructions
+
+## Owner vs. Member
+
+In every initiative, there's a distinction between the **owner** and **members**:
+
+### Initiative Owner
+
+The person who created the initiative. The owner can:
+- Edit the Delegate Brain configuration
+- Set up schedules and automations
+- Configure permissions for the delegate
+- Invite and remove members
+
+### Initiative Members
+
+People who have been invited to the initiative. Members can:
+- Chat with their own delegate
+- View the Activity Feed
+- Interact with posts and canvases
+- Use their connected integrations through their delegate
+
+Members cannot edit the Delegate Brain - only the owner controls that.
+
+## How Permissions Flow
+
+When your delegate takes action, it uses your permissions. This means:
+
+1. **Your integrations** - Your delegate uses the tools you've connected
+2. **Your access** - If you can't access something, neither can your delegate
+3. **Your approval** - High-stakes actions need your sign-off
+
+### Example
+
+Say you've connected Gmail with read/write access. When you ask your delegate to send an email, it:
+1. Uses your Gmail connection
+2. Sends from your email address
+3. Acts as if you sent it
+
+If a team member triggers an action that affects shared resources, their permissions are used - not yours.
+
+## Triggering Matters
+
+Who triggers the delegate affects which permissions are used:
+
+| Who Triggers | Whose Permissions |
+|--------------|-------------------|
+| You chat with your delegate | Your permissions |
+| Team member comments on your post | Their permissions |
+| Scheduled wakeup runs | Schedule creator's permissions |
+
+This is important for team safety. If someone comments on a post and your delegate responds, it uses that person's permissions, not the post author's.
+
+Learn more in [Owner vs. Member Permissions](/integrations/owner-vs-member).
+
+## Controlling Access
+
+You have granular control over what your delegate can do:
+
+### Simple Mode
+
+Toggle integrations on/off:
+- ✅ Gmail - Read & Write
+- ✅ Calendar - Read only
+- ❌ Slack - Not connected
+
+### Advanced Mode
+
+Request specific resources and capabilities:
+- Access to specific Google Docs
+- Ability to post to specific Slack channels
+- Read access to specific Linear projects
+
+Learn more in [Permissions](/integrations/permissions).
+
+## Revoking Access
+
+You can revoke your delegate's access at any time:
+- Disconnect an integration entirely
+- Remove specific resources
+- Downgrade from write to read-only
+
+Changes take effect immediately.
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Permissions" icon="shield" href="/integrations/permissions">
+    Deep dive into permission controls
+  </Card>
+  <Card title="Owner vs. Member" icon="users" href="/integrations/owner-vs-member">
+    Understand how team permissions work
+  </Card>
+</CardGroup>

@@ -1,0 +1,114 @@
+---
+title: Delegate Brain Overview
+description: The control center for your delegate's behavior, memory, and capabilities.
+---
+
+# Delegate Brain Overview
+
+The Delegate Brain is the control center for your delegate. It's where you configure how your delegate thinks, communicates, and takes action.
+
+## Accessing the Brain
+
+Click the **Brain** tab in the right panel of your initiative. You'll see all the configuration sections that control your delegate's behavior.
+
+## Brain Sections
+
+The Delegate Brain is organized into sections, each controlling a different aspect of your delegate:
+
+<CardGroup cols={2}>
+  <Card title="Identity" icon="user" href="/delegate-brain/identity">
+    Personality, tone, and communication style
+  </Card>
+  <Card title="Tasks" icon="list-check" href="/delegate-brain/tasks">
+    Active work your delegate is focused on
+  </Card>
+  <Card title="Memory" icon="lightbulb" href="/delegate-brain/memory">
+    What your delegate remembers about you
+  </Card>
+  <Card title="Skills" icon="wand-magic-sparkles" href="/delegate-brain/skills">
+    Specialized procedures and workflows
+  </Card>
+  <Card title="Schedules" icon="clock" href="/delegate-brain/schedules">
+    Recurring check-ins and automations
+  </Card>
+  <Card title="Permissions" icon="shield" href="/integrations/permissions">
+    What tools and resources your delegate can access
+  </Card>
+</CardGroup>
+
+### Additional Sections
+
+- **Progress Log** - A running log of what your delegate has accomplished
+- **Unfinished Business** - Pending items your delegate still needs to complete
+
+### Shared Sections
+
+Some sections are shared across all delegates in the initiative:
+
+- **Initiative Context** - Background information about the project that all delegates can reference
+- **Notifications** - How the delegate notifies stakeholders about important updates
+
+## Who Can Edit
+
+Only the **initiative owner** can edit the Delegate Brain. If you're a member of an initiative (not the owner), you can view the brain but not modify it.
+
+This ensures one person controls how the delegate behaves, preventing conflicting configurations.
+
+## How the Brain Affects Your Delegate
+
+Everything in the brain influences your delegate's behavior:
+
+| Section | Effect |
+|---------|--------|
+| Identity | Shapes communication style and personality |
+| Tasks | Guides what your delegate prioritizes |
+| Memory | Provides context for decisions |
+| Skills | Determines how specific tasks are handled |
+| Schedules | Triggers automatic check-ins |
+| Permissions | Controls what actions are possible |
+
+When you chat with your delegate, it draws on all of this to provide relevant, personalized responses.
+
+## Editing the Brain
+
+You can edit the brain in two ways:
+
+### Direct Editing
+
+Click on any section to expand it and edit the content directly. Changes save automatically.
+
+### Through Conversation
+
+Your delegate can update its own brain based on your conversations. When you say things like:
+
+> "Remember that I prefer bullet points over paragraphs."
+
+> "Add 'follow up with Sarah' to your tasks."
+
+Your delegate updates the relevant brain section automatically.
+
+## How Brain Data is Stored
+
+Behind the scenes, the brain is stored as a virtual filesystem in the database. Each section corresponds to one or more paths:
+
+- `/identity.md` - Your delegate's personality
+- `/tasks/` - Active tasks (stored as individual task files)
+- `/memory/` - Learned information organized by topic (e.g., `/memory/people/`, `/memory/decisions/`)
+- `/skills/` - Specialized procedures
+- `/progress-log.txt` - Activity log
+- `/unfinished-business.md` - Pending items
+
+You don't need to interact with these paths directly - the UI handles everything. But knowing this structure exists helps you understand how your delegate organizes information.
+
+## Next Steps
+
+Explore each brain section in detail:
+
+<CardGroup cols={2}>
+  <Card title="Identity" icon="user" href="/delegate-brain/identity">
+    Configure personality and tone
+  </Card>
+  <Card title="Tasks" icon="list-check" href="/delegate-brain/tasks">
+    Manage what your delegate works on
+  </Card>
+</CardGroup>

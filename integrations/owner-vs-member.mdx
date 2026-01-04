@@ -1,0 +1,132 @@
+---
+title: Owner vs. Member Permissions
+description: How permissions work when multiple people use the same initiative.
+---
+
+# Owner vs. Member Permissions
+
+When multiple people collaborate in an initiative, understanding whose permissions apply becomes important. This page explains how permissions flow based on who triggers the delegate.
+
+## The Core Principle
+
+> **Whoever triggers the delegate uses their own permissions.**
+
+This means:
+- When you chat with your delegate, it uses your permissions
+- When a team member comments in the feed, their delegate uses their permissions
+- When a schedule runs, it uses the owner's permissions
+
+## Why This Matters
+
+Consider this scenario:
+
+1. **You** have Gmail connected with write access
+2. **Alex** (team member) has Gmail with read-only access
+3. Alex comments: "Send an email to the client about this"
+
+What happens? Alex's delegate attempts to send the email using **Alex's permissions** - which are read-only. The email won't send.
+
+This prevents team members from accidentally (or intentionally) using your permissions for actions they shouldn't take.
+
+## Permission Scenarios
+
+| Who Triggers | Whose Permissions | Example |
+|--------------|-------------------|---------|
+| You chat with delegate | Your permissions | "Send an email to Sarah" |
+| Team member comments | Their permissions | Member asks to post to Slack |
+| Scheduled wakeup runs | Schedule creator's permissions | Weekly status report |
+| You comment on member's post | Your permissions | You reply to a team update |
+
+## Owner Permissions
+
+As the initiative owner, your permissions are used for:
+
+- **Your direct conversations** - Everything you ask your delegate to do
+- **Your comments in the feed** - When you respond to posts
+- **Schedules you create** - Automations you set up run with your permissions
+
+### Example: Scheduled Reports
+
+You set up a schedule: "Every Monday, email the team a status report."
+
+Since you created the schedule, your Gmail connection is used to send the email. Schedules always run with the permissions of whoever created them.
+
+## Member Permissions
+
+As an initiative member, your permissions are used for:
+
+- **Your comments in the feed** - Actions triggered by your comments
+- **Your direct conversations** - Chatting with your own delegate
+- **Your responses to posts** - When you engage with feed content
+
+### Example: Commenting on Posts
+
+You (a member) comment on a post: "Can you summarize this in Slack?"
+
+Your delegate will try to post to Slack using **your** Slack connection. If you haven't connected Slack or don't have write access, it won't work.
+
+## Protecting the Team
+
+This model exists to protect everyone:
+
+### You're Protected From
+
+- Team members using your write access without your knowledge
+- Accidental actions triggered by others' requests
+- Unintended scope creep of your permissions
+
+### Team Members Are Protected From
+
+- Actions taken with permissions they didn't grant
+- Being held responsible for actions using your access
+- Confusion about whose account was used
+
+## Shared Resources
+
+Some resources can be explicitly shared with the team:
+
+### Owner-Only Resources
+
+When you share a resource with "owner" scope, only your permissions can use it. Team member requests won't have access.
+
+### Team-Wide Resources
+
+When you share a resource with "all" scope, any team member's delegate can use it (with their own OAuth permissions as a baseline).
+
+## Best Practices
+
+### For Owners
+
+- **Set up schedules thoughtfully** - They use your permissions
+- **Be clear about shared resources** - Know what's owner-only vs. team-wide
+- **Review scheduled actions** - They run as you, not as team members
+
+### For Members
+
+- **Connect your own integrations** - You can't rely on the owner's
+- **Understand your access** - Your comments trigger your permissions
+- **Ask before expecting access** - You may need resources shared with you
+
+## Troubleshooting
+
+### "Why didn't my request work?"
+
+Check if:
+1. You have the integration connected
+2. You have the right permission level (read vs. write)
+3. For specific resources, they're shared with you (in Advanced mode)
+
+### "The schedule sent from the wrong account"
+
+Schedules use the permissions of whoever created them. Check who created the schedule - that person's integrations will be used.
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Permissions" icon="shield" href="/integrations/permissions">
+    Configure your permission levels
+  </Card>
+  <Card title="Delegate Ownership" icon="user-shield" href="/delegates/ownership">
+    Learn about delegate ownership model
+  </Card>
+</CardGroup>

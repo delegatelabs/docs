@@ -1,0 +1,125 @@
+---
+title: Integrations Overview
+description: Connect your tools to unlock your delegate's full potential.
+---
+
+# Integrations Overview
+
+Integrations connect your delegate to external tools like Gmail, Slack, Google Calendar, and more. Once connected, your delegate can read from and write to these tools on your behalf.
+
+## Supported Integrations
+
+Delegate supports a wide range of integrations:
+
+### Email & Calendar
+
+- **Gmail** - Send and read emails, search inbox, manage labels
+- **Google Calendar** - View events, create meetings, check availability
+
+### Documents
+
+- **Google Drive** - Access files and folders
+- **Google Docs** - Create and read documents
+- **Google Sheets** - Work with spreadsheets
+- **Google Slides** - Create and view presentations
+
+### Communication
+
+- **Slack** - Post messages, browse channels, send DMs
+- **WhatsApp** - Send and receive messages
+
+### Project Management
+
+- **Linear** - Create issues, manage projects, track work
+- **GitHub** - Manage repositories, issues, and pull requests
+- **Notion** - Access pages and databases
+
+### Design
+
+- **Figma** - Browse design files and projects
+
+### Meetings
+
+- **Zoom** - Schedule and manage meetings
+
+## Connecting Integrations
+
+To connect an integration:
+
+1. Click your profile in the sidebar
+2. Select **Integrations**
+3. Click **Connect** next to the integration you want
+4. Authorize access through the OAuth flow
+5. Configure permissions (what your delegate can do)
+
+Once connected, your delegate can use the integration immediately.
+
+## What Integrations Enable
+
+With integrations connected, your delegate can:
+
+- **Send emails** on your behalf
+- **Schedule meetings** and check calendar conflicts
+- **Create documents** and update existing ones
+- **Post to Slack** channels or send direct messages
+- **Create issues** in Linear or GitHub
+- **Search across** your connected tools
+
+## The Expectation of Control Model
+
+Delegate follows an "expectation of control" model for permissions:
+
+> **Your delegate only has access to what you explicitly grant.**
+
+This means:
+- Your delegate can't access tools you haven't connected
+- You control read vs. write permissions for each tool
+- You can revoke access at any time
+- Your OAuth permissions still apply - your delegate piggybacks on your access
+
+This model ensures you stay in control of what your delegate can do.
+
+## Permission Levels
+
+When connecting an integration, you choose the permission level:
+
+| Level | What It Means |
+|-------|---------------|
+| **Read** | View information but can't make changes |
+| **Write** | Can create and modify content |
+| **Read + Write** | Full access to view and modify |
+
+Start with read-only access and expand as you get comfortable.
+
+## Managing Integrations
+
+### Viewing Connected Integrations
+
+Go to **Profile → Integrations** to see all your connected integrations and their permission levels.
+
+### Changing Permissions
+
+You can adjust permissions at any time:
+- Upgrade from read to write
+- Downgrade from write to read-only
+- Enable or disable specific capabilities
+
+### Disconnecting
+
+To disconnect an integration:
+1. Go to **Profile → Integrations**
+2. Find the integration
+3. Click **Disconnect**
+
+Your delegate immediately loses access to that tool.
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Permissions" icon="shield" href="/integrations/permissions">
+    Deep dive into permission controls
+  </Card>
+  <Card title="Owner vs. Member" icon="users" href="/integrations/owner-vs-member">
+    How permissions work in team settings
+  </Card>
+</CardGroup>
