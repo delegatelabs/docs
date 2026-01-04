@@ -81,7 +81,7 @@
     ],
     "primary": {
       "type": "button",
-      "label": "Get Started",
+      "label": "Go to App",
       "href": "https://app.delegateai.app"
     }
   },
